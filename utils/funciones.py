@@ -19,7 +19,7 @@ def get_driver():
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
 
-    time.sleep (2)
+    time.sleep (4)
 
     return driver
 
@@ -30,4 +30,4 @@ def login_saucedemo(driver):
     driver.find_element(By.NAME,'password').send_keys(PASSWORD)
     driver.find_element(By.ID, 'login-button').click()
 
-    time.sleep(2)
+    time.sleep(4)

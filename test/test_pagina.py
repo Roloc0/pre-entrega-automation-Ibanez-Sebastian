@@ -1,9 +1,9 @@
 import pytest
-from utils.funciones import login_saucedemo, get_driver
-from selenium.webdriver.common.by import By
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
+from selenium.webdriver.common.by import By
+from utils.funciones import login_saucedemo, get_driver
 
 
 @pytest.fixture
