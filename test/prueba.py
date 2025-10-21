@@ -1,7 +1,12 @@
 import pytest
-
+from utils.funciones import login_saucedemo, get_driver
 
 @pytest.fixture
+
+# configuracion de los drivers de selenium
+def driver():
+    driver = get_driver()
+    yield driver
 
 
 # abrir el navegador
