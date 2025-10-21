@@ -13,13 +13,13 @@ PASSWORD = "secret_sauce"
 #instalacion del driver
 def get_driver():
 
-    options = Options()
-    options.add_argument('--star-maximized')
+    #options = Options()
+    #options.add_argument('--star-maximized')
 
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
 
-    time.sleep(6)
+    time.sleep (2)
 
     return driver
 
@@ -30,5 +30,4 @@ def login_saucedemo(driver):
     driver.find_element(By.NAME,'password').send_keys(PASSWORD)
     driver.find_element(By.ID, 'login-button').click()
 
-    time.sleep(6)
-
+    time.sleep(2)
